@@ -1,36 +1,77 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Car Management Application
+
+A web application built with Next.js that allows users to manage car records. Users can create, view, edit, and delete their cars with details like images, title, description, and tags. The app includes user authentication and search functionality for easy management of records.
+
+## Features
+- **User Authentication**: Sign-up and log-in functionality for users to securely manage their cars.
+- **Car CRUD Operations**: Create, view, update, and delete car records.
+- **Image Upload**: Support for up to 10 images per car.
+- **Tagging & Descriptions**: Add descriptive information and tags (car type, company, dealer) for each car.
+- **Search**: Search across a user's car collection based on title, description, and tags.
+- **API Documentation**: Access comprehensive API documentation at `/api/docs`.
+
+## Tech Stack
+- **Frontend/Backend**: [Next.js](https://nextjs.org/) (React-based framework).
+- **Database**: PostgreSQL,
+- **Authentication**: Next-Auth.
+- **Cloud Deployment**: Deployed on Vercel
+
+## Screenshots
+![Login Page](path/to/login-page-screenshot.png)
+![Product List Page](path/to/product-list-page-screenshot.png)
+![Product Detail Page](path/to/product-detail-page-screenshot.png)
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+- Node.js and npm installed.
+- MongoDB/PostgreSQL (or your chosen database).
+- Cloudinary/S3 bucket for image uploads (if required).
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+### Installation
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+1. **Clone the repository**:
+    ```bash
+    git clone https://github.com/your-username/car-management-app.git
+    cd car-management-app
+    ```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+2. **Install dependencies**:
+    ```bash
+    npm install
+    ```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+3. **Set up environment variables**:
+    Create a `.env.local` file in the root directory and add your environment variables:
+    ```env
+    DATABASE_URL=<your_database_url>
+    JWT_SECRET=<your_jwt_secret>
+    CLOUDINARY_URL=<your_cloudinary_url> # or another service for image storage
+    ```
 
-## Learn More
+4. **Run the application**:
+    ```bash
+    npm run dev
+    ```
 
-To learn more about Next.js, take a look at the following resources:
+5. **Access the application**:
+    Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### API Endpoints
+| Method | Endpoint           | Description                 |
+|--------|---------------------|-----------------------------|
+| POST   | `/api/users`       | Create a new user           |
+| POST   | `/api/auth/login`  | User login                  |
+| POST   | `/api/cars`        | Add a new car               |
+| GET    | `/api/cars`        | List all user's cars        |
+| GET    | `/api/cars/:id`    | View a particular car       |
+| PATCH  | `/api/cars/:id`    | Update a car's details      |
+| DELETE | `/api/cars/:id`    | Delete a car                |
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### API Documentation
+Full API documentation available at `/api/docs` (Swagger or Postman).
 
-## Deploy on Vercel
+## Deployment
+This app is deployed on [Vercel/Heroku](https://your-app-url.com). Visit the live version here: [https://your-app-url.com](https://your-app-url.com).
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Folder Structure
