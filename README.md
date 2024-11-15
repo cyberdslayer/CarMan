@@ -75,3 +75,21 @@ Full API documentation available at `/api/docs` (Swagger or Postman).
 This app is deployed on [Vercel/Heroku](https://your-app-url.com). Visit the live version here: [https://your-app-url.com](https://your-app-url.com).
 
 ## Folder Structure
+car-management-app/ ├── pages/ # Next.js pages ├── components/ # Reusable components ├── lib/ # API and utility functions ├── public/ # Static assets ├── .env.local # Environment variables ├── README.md └── ...
+
+
+## Future Enhancements
+- **Pagination**: Support for paginated views.
+- **Advanced Search Filters**: Filter cars by type, company, or dealer.
+- **Image Compression**: Compress images before uploading.
+- **Notifications**: Send notifications on new car entries.
+
+## Contributing
+1. Fork the repository.
+2. Create a new branch (`git checkout -b feature-name`).
+3. Make your changes and commit them (`git commit -m 'Add feature'`).
+4. Push to the branch (`git push origin feature-name`).
+5. Open a pull request.
+
+Happy coding! 😊
+
